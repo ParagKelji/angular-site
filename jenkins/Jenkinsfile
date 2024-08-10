@@ -1,0 +1,26 @@
+pipeline {
+    agent any {
+        stages("build") {
+            steps {
+                echo 'Building the front end'
+                sh 'npm install'
+                sh 'npm install axios'
+                sh 'npm build'
+            }
+        }
+        stages("test") {
+            steps {
+                echo 'Testing the front end'
+            }
+        }
+        stages("deploy") {
+            steps {
+                echo 'Deploying the front end'
+            }
+        }
+    }
+}
+
+node {
+    //groovy script
+}
