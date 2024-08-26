@@ -1,12 +1,21 @@
 <div class="row justify-content-md-center">
     <div class="col-4">
         <div class="card" style="width: '18rem';">
-            <div class="card-body">
-                <h5 class="card-title">JSON-Web-Token Response</h5>
-                <p class="card-text">Content:</p>
-                <ul>
-                    <li *ngFor="let line of data">{{line}}</li>
-                </ul>
+            <div class="card-body table-responsive">
+                <h5 class="card-title text-success display-7">JSON-Web-Token Response</h5>
+                <p class="card-text text-primary display-7">Content:</p>
+                <table class="table table-bordered table-stripped table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Sport</th>
+                            <th>Country of Origin</th>
+                        </tr>
+                    </thead>
+                    <tr *ngFor="let line of data">
+                        <td>{{line.sportsName}}</td>
+                        <td>{{line.countryOfOrigin}}</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
